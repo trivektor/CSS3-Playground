@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unbox</title>
+    <style>
+      html, body, div, ul, li {
+        margin: 0;
+        padding: 0;
+      }
+
+      html, body {
+        width: 100%;
+        height: 100%;
+        background: #333;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      #box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        background: #fff;
+        -webkit-transform: translate(-50%, -50%);
+        -webkit-perspective: 600px;
+      }
+
+      .lid {
+        position: absolute;
+        -webkit-transition: all linear 1s;
+      }
+
+      #left-lid {
+        width: 50%;
+        height: 100%;
+        background: #e74c3c;
+        -webkit-transform-origin: 0 0;
+        -webkit-transform: rotateY(360deg);
+      }
+
+      #left-lid.open {
+        -webkit-transform: rotateY(180deg);
+      }
+
+      #top-lid {
+        width: 100%;
+        height: 50%;
+        background: #f1c40f;
+        -webkit-transform-origin: 0 0;
+      }
+
+      #top-lid.open {
+        -webkit-transform: rotateX(180deg);
+      }
+
+      #right-lid {
+        width: 50%;
+        height: 100%;
+        left: 50%;
+        background: #3498db;
+        -webkit-transform-origin: 100% 0;
+      }
+
+      #right-lid.open {
+        -webkit-transform: rotateY(180deg);
+      }
+
+      #bottom-lid {
+        width: 100%;
+        height: 50%;
+        top: 50%;
+        background: #2ecc71;
+        -webkit-transform-origin: 0 100%;
+      }
+
+      #bottom-lid.open {
+        -webkit-transform: rotateX(-180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <ul id='box'>
+      <li id='left-lid' class='lid'></li>
+      <li id='right-lid' class='lid'></li>
+      <li id='top-lid' class='lid'></li>
+      <li id='bottom-lid' class='lid'></li>
+    </ul>
+    <button id='open'>Open / Close</button>
+    <script src='http://code.jquery.com/jquery-2.0.3.min.js'></script>
+    <script>
+      $(function() {
+        var leftLid = $('#left-lid')
+          , topLid = $('#top-lid')
+          , rightLid = $('#right-lid')
+          , bottomLid = $('#bottom-lid');
+
+        $('#open').click(function() {
+          leftLid.toggleClass('open')
+          topLid.toggleClass('open')
+          rightLid.toggleClass('open')
+          bottomLid.toggleClass('open')
+        })
+      })
+    </script>
+  </body>
+</html>

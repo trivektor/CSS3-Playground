@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fancy Icons</title>
+    <link rel='stylesheet' type='text/css' href='../font-awesome/css/font-awesome.css' />
+    <style>
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: #0078ca;
+      }
+
+      #icon-grid {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 744px;
+        margin: -100px 0 0 -360px;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      #icon-grid li {
+        float: left;
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        color: #fff;
+        border: 4px solid #fff;
+        border-radius: 50%;
+        list-style: none;
+        position: relative;
+        -webkit-transition: all linear .5s;
+      }
+
+      #icon-grid li:after {
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        border: 4px solid #fff;
+        content: "";
+        opacity: 0;
+        -webkit-transition: all linear .2s;
+      }
+
+      #icon-grid li i {
+        text-align: center;
+        font-size: 80px;
+        display: -webkit-box;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        width: 100%;
+        height: 100%;
+      }
+
+      #icon-grid li:hover {
+        background: #fff;
+        color: #0078ca;
+        -webkit-animation-name: icon-spin;
+        -webkit-animation-duration: 1s;
+      }
+
+      #icon-grid li:hover:after {
+        opacity: 1;
+        -webkit-transform: scale(1.14);
+      }
+
+      @-webkit-keyframes icon-spin {
+        0%   { -webkit-transform: rotate(0deg) }
+        100% { -webkit-transform: rotate(360deg) }
+      }
+    </style>
+  </head>
+  <body>
+    <ul id='icon-grid'>
+      <li>
+        <i class='icon icon-bell'></i>
+      </li>
+      <li>
+        <i class='icon icon-camera'></i>
+      </li>
+      <li>
+        <i class='icon icon-beaker'></i>
+      </li>
+    </ul>
+  </body>
+</html>

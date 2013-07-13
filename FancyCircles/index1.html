@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demo</title>
+    <style>
+      body {
+        background: #000;
+        font-family: Arial;
+      }
+
+      #panel {
+        width: 90%;
+        margin: 100px auto;
+        text-align: center;
+      }
+
+      .circle {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        border-radius: 50%;
+        position: relative;
+      }
+
+      .circle:before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        margin-top: -20px;
+        color: #fff;
+        text-align: center;
+        text-transform: capitalize;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+        content: attr(data-caption);
+        font-size: 40px;
+        -webkit-transform: scale(0);
+        -webkit-transition: all linear .1s;
+        z-index: 10;
+      }
+
+      .circle:hover:before {
+        -webkit-transform: scale(1);
+      }
+
+      .circle:after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        background: rgba(0, 0, 0, .4);
+        content: "";
+        border-radius: 50%;
+        -webkit-tranform-origin: 50% 50%;
+        -webkit-transition: all ease-in-out .2s;
+      }
+
+      .circle:hover:after {
+        opacity: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .red-circle {
+        background: #fb2b2b;
+      }
+
+      .green-circle {
+        background: #5ac42b;
+      }
+
+      .blue-circle {
+        background: #1fabfc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='panel'>
+      <div class='circle red-circle' data-caption='red'></div>
+      <div class='circle green-circle' data-caption='green'></div>
+      <div class='circle blue-circle' data-caption='blue'></div>
+    </div>
+  </body>
+</html>
