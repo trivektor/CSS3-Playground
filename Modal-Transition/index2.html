@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Modal Transition</title>
+    <style>
+      html, body, div {
+        margin: 0;
+        padding: 0;
+      }
+
+      html, body {
+        width: 100%;
+        height: 100%;
+      }
+
+      body {
+        font-family: Arial;
+        font-size: 20px;
+        background: #3498db;
+        -webkit-perspective: 600px;
+      }
+
+      #modal {
+        width: 500px;
+        height: 400px;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -200px 0 0 -250px;
+        opacity: 0;
+        -webkit-transform-origin: 0 0;
+        -webkit-transform: rotateX(-90deg);
+        -webkit-transition: all ease-in .25s;
+        /*-webkit-box-shadow: 11px 11px 0 rgba(0, 0, 0, .1);*/
+      }
+
+      #modal.active {
+        opacity: 1;
+        -webkit-transform: rotateX(0);
+      }
+
+      #modal-header {
+        padding: 15px;
+        background: #1abc9c;
+        color: #fff;
+      }
+
+    </style>
+  </head>
+  <body>
+    <button id='show-modal'>Show modal</button>
+    <div id='modal'>
+      <header id='modal-header'>Header</header>
+    </div>
+    <script src='http://code.jquery.com/jquery-2.0.3.min.js'></script>
+    <script>
+      $(function() {
+        $('#show-modal').click(function() {
+          $('#modal').toggleClass('active')
+        })
+      })
+    </script>
+  </body>
+</html>
