@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todos List</title>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+    <style>
+      body {
+        background: #e74c3c;
+        font-family: 'Roboto', sans-serif;
+        font-size: 23px;
+      }
+
+      menu,
+      ul {
+        margin: 0;
+        list-style: none;
+      }
+
+      #todos {
+        width: 500px;
+        margin: 20px auto;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 10px 10px 0 rgba(0, 0, 0, .1);
+        counter-reset: todo;
+      }
+
+      #todos li {
+        position: relative;
+        color: #e74c3c;
+        margin: 1px 0;
+        overflow: hidden;
+      }
+
+      .details {
+        background: #3498db;
+        padding: 20px;
+        transition: all linear .3s;
+        position: relative;
+        z-index: 10;
+        color: #fff;
+        cursor: pointer;
+        counter-increment: todo;
+      }
+
+      .details:before {
+        content: counter(todo)'.';
+      }
+
+      .slided .details {
+        background: #2ecc71;
+        box-shadow: 10px 0 0 rgba(0, 0, 0, .15);
+        -webkit-transform: translateX(-120px);
+      }
+
+      .actions-panel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        padding: 20px 10px;
+        text-align: right;
+      }
+
+      menu i {
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style='color: #fff; text-align: center'>Todos</h1>
+    <ul id='todos'>
+      <li>
+        <div class='details'>
+          Groceries shopping
+        </div>
+        <menu class='actions-panel'>
+          <i class='icon-star'></i>
+          <i class='icon-pencil'></i>
+          <i class='icon-trash'></i>
+        </menu>
+      </li>
+      <li>
+        <div class='details'>
+          Do laundry
+        </div>
+        <menu class='actions-panel'>
+          <i class='icon-star'></i>
+          <i class='icon-pencil'></i>
+          <i class='icon-trash'></i>
+        </menu>
+      </li>
+      <li>
+        <div class='details'>
+          Buy comics books
+        </div>
+        <menu class='actions-panel'>
+          <i class='icon-star'></i>
+          <i class='icon-pencil'></i>
+          <i class='icon-trash'></i>
+        </menu>
+      </li>
+      <li>
+        <div class='details'>
+          Pay PG&E bill for July
+        </div>
+        <menu class='actions-panel'>
+          <i class='icon-star'></i>
+          <i class='icon-pencil'></i>
+          <i class='icon-trash'></i>
+        </menu>
+      </li>
+    </ul>
+    <script src='http://code.jquery.com/jquery-2.0.3.min.js'></script>
+    <script>
+      $('#todos').delegate('li', 'click', function() {
+        $(this)
+          .toggleClass('slided')
+          .siblings()
+          .removeClass('slided')
+      })
+    </script>
+  </body>
+</html>

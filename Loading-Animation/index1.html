@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loading Animation</title>
+    <style>
+      #animating-circles {
+        list-style: none;
+        padding: 0;
+      }
+
+      #animating-circles li {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        float: left;
+        margin: 10px;
+        -webkit-animation-duration: .8s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-direction: alternate;
+
+      }
+
+      #animating-circles li:nth-child(2n+1) {
+        background: #3498db;
+        -webkit-animation-name: animate-up;
+      }
+
+      #animating-circles li:nth-child(2n) {
+        background: #e74c3c;
+        -webkit-animation-name: animate-down;
+      }
+
+      @-webkit-keyframes animate-up {
+        from { -webkit-transform: translateY(-5px) }
+        to { -webkit-transform: translateY(10px) }
+      }
+
+      @-webkit-keyframes animate-down {
+        from { -webkit-transform: translateY(10px) }
+        to { -webkit-transform: translateY(-10px) }
+      }
+    </style>
+  </head>
+  <body>
+    <ul id='animating-circles'>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </body>
+</html>
