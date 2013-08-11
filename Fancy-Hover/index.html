@@ -155,6 +155,64 @@
       #section-4 li:hover span {
         -webkit-transform: rotateX(90deg) translateY(20px);
       }
+
+      /* Section 5 */
+      #section-5 {
+        background: #2c3e50;
+        color: #7E8B8C;
+      }
+
+      #section-5 li {
+        padding: 0;
+        margin: 50px;
+        white-space: nowrap ;
+      }
+
+      #section-5 li:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        overflow: hidden;
+        content: attr(data-hover);
+        color: #fff;
+        -webkit-box-sizing: border-box;
+        -webkit-transition: all ease-in-out .5s;
+      }
+
+      #section-5 li:hover:after {
+        width: 100%;
+      }
+
+      /* Section 6 */
+      #section-6 {
+        background: #c0392b;
+        color: #fff;
+      }
+
+      #section-6 li {
+        -webkit-transform: all ease-out .6s;
+        padding: 0;
+        margin: 50px;
+      }
+
+      #section-6 li:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: attr(data-hover);
+      }
+
+      #section-6 li:hover:after {
+        -webkit-animation-name: section-6;
+        -webkit-animation-duration: .6s;
+        -webkit-animation-timing-function: ease-in-out;
+      }
+
+      @-webkit-keyframes section-6 {
+        from { opacity: 1 }
+        to { -webkit-transform: scale(2.5, 2.5); opacity: 0 }
+      }
 </style>
   </head>
   <body>
@@ -204,5 +262,24 @@
         </li>
       </menu>
     </section>
+    <section id='section-5'>
+      <menu>
+        <li data-hover='Athens'>Athens</li>
+        <li data-hover='Lisbon'>Lisbon</li>
+        <li data-hover='Moscow'>Moscow</li>
+        <li data-hover='Quebec City'>Quebec City</li>
+        <li data-hover='Budapest'>Budapest</li>
+      </menu>
+    </section>
+    <section id='section-6'>
+      <menu>
+        <li data-hover='Barcelona'>Barcelona</li>
+        <li data-hover='Kualar Lumpur'>Kualar Lumpur</li>
+        <li data-hover='Buenos Aires'>Buenos Aires</li>
+        <li data-hover='Cape Town'>Cape Town</li>
+        <li data-hover='Marseille'>Marseille</li>
+      </menu>
+    </section>
+
   </body>
 </html>
