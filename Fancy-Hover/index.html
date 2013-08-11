@@ -8,37 +8,37 @@
         padding: 0;
         margin: 0;
       }
-      
+
       body {
         font-family: 'Raleway', sans-serif;
-        font-size: 30px;
+        font-size: 25px;
         color: #fff;
       }
-      
+
       menu {
         display: block;
         list-style: none;
         text-align: center;
       }
-      
+
       menu li {
         display: inline-block;
         padding: 30px;
         margin: 0 20px;
         position: relative;
       }
-      
+
       section {
         padding: 100px 0;
       }
-      
+
       /* Section 1 */
       #section-1 {
         background: #34495e;
       }
-      
+
       #section-1 li:after {
-        -webkit-transition: all ease-in-out .3s;
+        -webkit-transition: all ease-in .4s;
         position: absolute;
         top: 120%;
         left: 20px;
@@ -48,17 +48,17 @@
         content: "";
         opacity: 0;
       }
-      
+
       #section-1 li:hover:after {
         top: 85%;
         opacity: 1;
       }
-      
+
       /* Section 2 */
       #section-2 {
         background: #3498db;
       }
-      
+
       #section-2 li:before,
       #section-2 li:after {
         position: absolute;
@@ -71,36 +71,36 @@
         -webkit-transform: translate(0, 50%);
         -webkit-transition: all ease-out .22s;
       }
-      
+
       #section-2 li:before {
         left: -10px;
-        content: "[";
+        content: "{";
       }
-      
+
       #section-2 li:hover:before {
         left: 5px;
       }
-      
+
       #section-2 li:after {
         right: -10px;
-        content: "]";        
+        content: "}";
       }
-      
+
       #section-2 li:hover:after {
         right: 5px;
       }
-      
+
       #section-2 li:hover:before,
       #section-2 li:hover:after {
         opacity: 1;
       }
-      
+
       /* Section 3 */
       #section-3 {
         background: #e74c3c;
         -webkit-perspective: 1000px;
       }
-      
+
       #section-3 li:after {
         position: absolute;
         bottom: 30px;
@@ -114,11 +114,48 @@
         -webkit-transform: skewX(-60deg);
         -webkit-transition: all linear .2s;
       }
-      
+
       #section-3 li:hover:after {
         opacity: 1;
       }
-    </style>
+
+      /* Section 4 */
+      #section-4 {
+        background: #2ecc71;
+      }
+
+      #section-4 li {
+        padding: 0;
+        -webkit-perspective: 1000px;
+      }
+
+      #section-4 li span {
+        display: inline-block;
+        padding: 10px 25px;
+        background: #2AB765;
+        position: relative;
+        -webkit-transform-origin: 50% 0;
+        -webkit-transform-style: preserve-3d;
+        -webkit-transition: all ease-in-out .3s;
+      }
+
+      #section-4 li span:after {
+        position: absolute;
+        content: attr(data-hover);
+        padding: 10px 20px;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        color: #2AB765;
+        -webkit-transform-origin: 50% 0;
+        -webkit-transform: rotateX(-90deg);
+      }
+
+      #section-4 li:hover span {
+        -webkit-transform: rotateX(90deg) translateY(20px);
+      }
+</style>
   </head>
   <body>
     <section id='section-1'>
@@ -136,7 +173,7 @@
         <li>San Francisco</li>
         <li>Berlin</li>
         <li>Hong Kong</li>
-        <li>Chicago</li>        
+        <li>Chicago</li>
       </menu>
     </section>
     <section id='section-3'>
@@ -145,8 +182,27 @@
         <li data-shadow-caption='Vienna'>Vienna</li>
         <li data-shadow-caption='Milan'>Milan</li>
         <li data-shadow-caption='Dallas'>Dallas</li>
-        <li data-shadow-caption='Rome'>Rome</li> 
-      </menu>      
+        <li data-shadow-caption='Rome'>Rome</li>
+      </menu>
+    </section>
+    <section id='section-4'>
+      <menu>
+        <li>
+          <span data-hover='BKK'>Bangkok</span>
+        </li>
+        <li>
+          <span data-hover='DEL'>New Dehli</span>
+        </li>
+        <li>
+          <span data-hover='CCS'>Caracas</span>
+        </li>
+        <li>
+          <span data-hover='HAV'>Havana</span>
+        </li>
+        <li>
+          <span data-hover='DUB'>Dublin</span>
+        </li>
+      </menu>
     </section>
   </body>
 </html>
