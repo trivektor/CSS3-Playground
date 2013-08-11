@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fancy Hover</title>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <style>
+      html, body, menu {
+        padding: 0;
+        margin: 0;
+      }
+      
+      body {
+        font-family: 'Raleway', sans-serif;
+        font-size: 30px;
+        color: #fff;
+      }
+      
+      menu {
+        display: block;
+        list-style: none;
+        text-align: center;
+      }
+      
+      menu li {
+        display: inline-block;
+        padding: 30px;
+        margin: 0 20px;
+        position: relative;
+      }
+      
+      section {
+        padding: 100px 0;
+      }
+      
+      /* Section 1 */
+      #section-1 {
+        background: #34495e;
+      }
+      
+      #section-1 li:after {
+        -webkit-transition: all ease-in-out .3s;
+        position: absolute;
+        top: 120%;
+        left: 20px;
+        right: 20px;
+        height: 2px;
+        background: #fff;
+        content: "";
+        opacity: 0;
+      }
+      
+      #section-1 li:hover:after {
+        top: 85%;
+        opacity: 1;
+      }
+      
+      /* Section 2 */
+      #section-2 {
+        background: #3498db;
+      }
+      
+      #section-2 li:before,
+      #section-2 li:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        font-size: 50px;
+        line-height: 50px;
+        height: 50px;
+        opacity: 0;
+        -webkit-transform: translate(0, 50%);
+        -webkit-transition: all ease-out .22s;
+      }
+      
+      #section-2 li:before {
+        left: -10px;
+        content: "[";
+      }
+      
+      #section-2 li:hover:before {
+        left: 5px;
+      }
+      
+      #section-2 li:after {
+        right: -10px;
+        content: "]";        
+      }
+      
+      #section-2 li:hover:after {
+        right: 5px;
+      }
+      
+      #section-2 li:hover:before,
+      #section-2 li:hover:after {
+        opacity: 1;
+      }
+      
+      /* Section 3 */
+      #section-3 {
+        background: #e74c3c;
+        -webkit-perspective: 1000px;
+      }
+      
+      #section-3 li:after {
+        position: absolute;
+        bottom: 30px;
+        right: 8px;
+        content: attr(data-shadow-caption);
+        color: rgba(0, 0, 0, .15);
+        z-index: -1;
+        font-weight: bold;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .15);
+        opacity: 0;
+        -webkit-transform: skewX(-60deg);
+        -webkit-transition: all linear .2s;
+      }
+      
+      #section-3 li:hover:after {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <section id='section-1'>
+      <menu>
+        <li>London</li>
+        <li>New York</li>
+        <li>Paris</li>
+        <li>Tokyo</li>
+        <li>Amsterdam</li>
+      </menu>
+    </section>
+    <section id='section-2'>
+      <menu>
+        <li>Beijing</li>
+        <li>San Francisco</li>
+        <li>Berlin</li>
+        <li>Hong Kong</li>
+        <li>Chicago</li>        
+      </menu>
+    </section>
+    <section id='section-3'>
+      <menu>
+        <li data-shadow-caption='Madrid'>Madrid</li>
+        <li data-shadow-caption='Vienna'>Vienna</li>
+        <li data-shadow-caption='Milan'>Milan</li>
+        <li data-shadow-caption='Dallas'>Dallas</li>
+        <li data-shadow-caption='Rome'>Rome</li> 
+      </menu>      
+    </section>
+  </body>
+</html>
