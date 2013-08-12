@@ -213,6 +213,37 @@
         from { opacity: 1 }
         to { -webkit-transform: scale(2.5, 2.5); opacity: 0 }
       }
+
+      /* Section 7 */
+      #section-7 {
+        background: #e67e22;
+      }
+
+      #section-7 li {
+        padding: 10px 25px;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      #section-7 li:after {
+        position: absolute;
+        top: 100%;
+        left: 100%;
+        padding: inherit;
+        background: #fff;
+        color: #e67e22;
+        content: attr(data-hover);
+        -webkit-transition: all ease-in-out .5s;
+      }
+
+      #section-7 li:hover {
+        color: rgba(0, 0, 0, 0);
+      }
+
+      #section-7 li:hover:after {
+        top: 0;
+        left: 0;
+      }
 </style>
   </head>
   <body>
@@ -280,6 +311,14 @@
         <li data-hover='Marseille'>Marseille</li>
       </menu>
     </section>
-
+    <section id='section-7'>
+      <menu>
+        <li data-hover='Seoul'>Seoul</li>
+        <li data-hover='Houston'>Houston</li>
+        <li data-hover='Montreal'>Montreal</li>
+        <li data-hover='Las Vegas'>Las Vegas</li>
+        <li data-hover='Venice'>Venice</li>
+      </menu>
+    </section>
   </body>
 </html>
