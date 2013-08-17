@@ -17,12 +17,39 @@ body {
 #head {
   width: 300px;
   height: 300px;
-  background: #F7D54F;
+  background-image: -webkit-linear-gradient(left top, #F9DF82, #F1A722);
   position: absolute;
   top: calc(50% - 162px);
   left: calc(50% - 162px);
   border-radius: 50%;
   border: 12px solid #EF9F1D;
+  box-shadow: 0 3px 10px -1px rgba(0, 0, 0, .5);
+  overflow: hidden;
+
+  &:before,
+  &:after {
+    position: absolute;
+    left: 0;
+    content: '';
+  }
+
+  &:before {
+    top: 0;
+    width: 300px;
+    height: 300px;
+    border-top: 15px solid rgba(255, 255, 255, .5);
+    z-index: 11;
+    border-radius: 50%;
+  }
+
+  &:after {
+    bottom: -10px;
+    width: 300px;
+    height: 300px;
+    border-bottom: 20px solid rgba(255, 255, 255, .5);
+    z-index: 11;
+    border-radius: 50%;
+  }
 }
 
 #mouth {
@@ -73,19 +100,19 @@ body {
   &:before,
   &:after {
     position: absolute;
-    width: 35%;
+    width: 50%;
     height: 100%;
     content: "";
     opacity: .8;
   }
 
   &:before {
-    left: 0;
+    left: -25px;
     background-image: -webkit-linear-gradient(bottom left, #333, #fff);
   }
 
   &:after {
-    right: 0;
+    right: -25px;
     background-image: -webkit-linear-gradient(bottom right, #333, #fff);
   }
 }
