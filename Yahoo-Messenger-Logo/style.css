@@ -11,7 +11,7 @@ body {
 body {
   background: #9b59b6; }
 
-#logo {
+#head {
   width: 300px;
   height: 300px;
   background: #F7D54F;
@@ -53,6 +53,25 @@ body {
     background: #C41D23;
     border-radius: 50%;
     box-shadow: 0 5px 25px 20px #C41D23; }
+
+#jaw {
+  position: relative;
+  z-index: 10;
+  height: 24px;
+  background: #fff;
+  border-bottom: 7px solid #000; }
+  #jaw:before, #jaw:after {
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    content: "";
+    opacity: .8; }
+  #jaw:before {
+    left: 0;
+    background-image: -webkit-linear-gradient(bottom left, #333333, white); }
+  #jaw:after {
+    right: 0;
+    background-image: -webkit-linear-gradient(bottom right, #333333, white); }
 
 #eyes {
   width: 120px;
