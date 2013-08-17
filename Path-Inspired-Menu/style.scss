@@ -1,0 +1,99 @@
+html,
+body,
+menu,
+i {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Arial;
+  font-size: 14px;
+  color: #fff;
+  background: #c0392b;
+}
+
+#menu {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: {
+    top: -200px;
+    left: -200px;
+  }
+}
+
+#icon-plus-sign {
+  color: #000;
+  width: 36px;
+  height: 43px;
+  background: #fff;
+  border-radius: 22px;
+  padding: 1px 4px 0;
+  box-shadow: 0 3px 6px -2px rgba(0, 0, 0, .5);
+  position: absolute;
+  top: calc(50% - 22px);
+  left: calc(50% - 22px);
+  z-index: 100;
+  -webkit-transition: all ease-out .4s;
+  cursor: pointer;
+}
+
+#icon-camera,
+#icon-map-marker,
+#icon-music {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transition: all ease-in-out .22s;
+  -webkit-transform: rotate(-350deg);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .6);
+}
+
+#icon-camera {
+  font-size: 31px;
+}
+
+#icon-map-marker {
+  font-size: 46px;
+}
+
+#icon-music {
+  font-size: 34px;
+}
+
+#menu.active {
+  #icon-plus-sign {
+    -webkit-transform: rotate(45deg);
+  }
+
+  #icon-camera {
+    top: calc(50% - 70px);
+    left: 70px;
+    opacity: 1;
+    -webkit-transform: rotate(0);
+  }
+
+  #icon-map-marker {
+    opacity: 1;
+    top: calc(50% - 140px);
+    left: calc(50% - 16px);
+    -webkit-transform: rotate(0);
+  }
+
+  #icon-music {
+    opacity: 1;
+    top: calc(50% - 72px);
+    left: 295px;
+    -webkit-transform: rotate(0);
+  }
+}

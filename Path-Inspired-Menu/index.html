@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Path Inspired Menu</title>
+    <link rel='stylesheet' type='text/css' href='http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+  </head>
+  <body>
+    <menu id='menu'>
+      <i id='icon-plus-sign' class='icon-plus-sign icon-3x'></i>
+      <i id='icon-camera' class='icon-camera'></i>
+      <i id='icon-map-marker' class='icon-map-marker'></i>
+      <i id='icon-music' class='icon-music'></i>
+    </menu>
+    <script>
+      var iconPlusSign = document.querySelector('#icon-plus-sign')
+        , menu = document.querySelector('#menu');
+
+      iconPlusSign.addEventListener('click', function() {
+        menu.classList.toggle('active');
+      }, false);
+    </script>
+  </body>
+</html>
