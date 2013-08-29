@@ -2,14 +2,15 @@ html,
 body,
 div,
 menu,
-p {
+p,
+figure {
   margin: 0;
   padding: 0;
 }
 
 body {
   background: #3498db;
-  font-family: Arial;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 #iphone {
@@ -42,7 +43,7 @@ body {
   box-shadow: 0 3px 0 rgba(0, 0, 0, .06) inset;
 }
 
-#camera {
+#camera-lense {
   display: inline-block;
   width: 12px;
   height: 12px;
@@ -117,6 +118,7 @@ body {
 #apps-grid {
   overflow: hidden;
   list-style: none;
+  padding: 5px 0;
 
   li {
     float: left;
@@ -127,26 +129,58 @@ body {
 }
 
 .app-icon {
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  border-radius: 10px;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .app-name {
   text-align: center;
   color: #fff;
-  font: {
-    size: 11px;
-  }
+  font-size: 14px;
   margin-top: 6px;
+  letter-spacing: 1px;
 }
 
 #sms {
   background: #2ecc71;
 
   .icon-comment {
+    display: inline-block;
+    margin-top: 6px;
     color: #fff;
-    font-size: 40px;
+    font-size: 45px;
   }
+}
+
+#ical {
+  background: #fff;
+
+  header {
+    display: block;
+    padding: 8px 0 0;
+    color: red;
+    font-size: 12px;
+  }
+
+  figure {
+    display: block;
+    font-size: 35px;
+    font-weight: normal;
+    line-height: 33px;
+  }
+}
+
+#camera {
+  background: #fff;
+
+ .icon-camera {
+   display: inline-block;
+   margin-top: 10px;
+   font-size: 50px;
+   color: #aaa;
+ }
 }
