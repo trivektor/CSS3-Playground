@@ -153,7 +153,20 @@ body {
     width: 90px;
     text-align: center;
     padding: 10px 0;
+
+    &.shaking {
+      -webkit-animation-name: shaking;
+      -webkit-animation-duration: .12s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
+      -webkit-animation-easing-function: ease-in;
+    }
   }
+}
+
+@-webkit-keyframes shaking {
+  from { -webkit-transform: rotate(2deg) }
+  to { -webkit-transform: rotate(-2deg) }
 }
 
 .app-icon {
