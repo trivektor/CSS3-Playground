@@ -87,15 +87,37 @@ body {
   padding: 3px;
   background: rgba(0, 0, 0, 0.2);
   color: #fff;
-  font-size: 13px;
+  font-size: 12px;
   text-align: center;
-  font-weight: bold; }
+  font-weight: 600; }
   #navigation-bar i {
     font-size: 14px; }
   #navigation-bar .connectivity {
     float: left; }
   #navigation-bar .utilities {
     float: right; }
+  #navigation-bar .battery {
+    display: inline-block;
+    width: 17px;
+    height: 8px;
+    border: 1px solid #fff;
+    position: relative; }
+    #navigation-bar .battery:before {
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      bottom: 1px;
+      content: "";
+      width: 61%;
+      background: #fff; }
+    #navigation-bar .battery:after {
+      position: absolute;
+      content: "";
+      border: 1px solid #fff;
+      border-left: 0;
+      top: 2px;
+      right: -3px;
+      padding: 1px; }
 
 #apps-grid {
   overflow: hidden;
