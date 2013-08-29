@@ -129,12 +129,19 @@ body {
 }
 
 .app-icon {
-  width: 70px;
-  height: 70px;
+  width: 68px;
+  height: 68px;
   margin: 0 auto;
-  display: block;
+  display: inline-block;
   border-radius: 15px;
   overflow: hidden;
+
+  i[class*=icon] {
+    display: inline-block;
+    margin-top: 8px;
+    color: #fff;
+    font-size: 48px;
+  }
 }
 
 .app-name {
@@ -147,13 +154,6 @@ body {
 
 #sms {
   background: #2ecc71;
-
-  .icon-comment {
-    display: inline-block;
-    margin-top: 6px;
-    color: #fff;
-    font-size: 45px;
-  }
 }
 
 #ical {
@@ -178,9 +178,67 @@ body {
   background: #fff;
 
  .icon-camera {
-   display: inline-block;
-   margin-top: 10px;
-   font-size: 50px;
    color: #aaa;
  }
+}
+
+#dropbox {
+  background: #3498db;
+}
+
+#gplus {
+  background: #e74c3c;
+}
+
+#linkedin {
+  background: #2980b9;
+
+  .icon-linkedin {
+    color: #fff;
+  }
+}
+
+#pinterest {
+  background: #fff;
+
+  .icon-pinterest {
+    font-size: 55px;
+    color: #ED003B;
+  }
+}
+
+#freshbooks {
+  background: #fff;
+
+  .icon-leaf {
+    color: #2ecc71;
+  }
+}
+
+#mail {
+  background: #3498db;
+
+  .icon-envelope {
+    color: #fff;
+  }
+}
+
+#weather {
+  background: #FFBB00;
+}
+
+#facebook {
+  background: #415E9B;
+
+  .icon-facebook {
+    margin-top: 10px;
+  }
+}
+
+#youtube {
+  background: #ED1730;
+}
+
+#music {
+  background: #9b59b6;
 }
