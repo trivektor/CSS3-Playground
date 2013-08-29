@@ -1,0 +1,90 @@
+html,
+body,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #3498db;
+}
+
+#iphone {
+  display: block;
+  width: 360px;
+  height: 560px;
+  border-width: 90px 18px 90px;
+  border-style: solid;
+  border-color: #fff;
+  margin: 30px auto;
+  border-radius: 35px;
+  position: relative;
+  box-shadow: 15px 15px 0 rgba(0, 0, 0, .2);
+}
+
+#top-pane {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  top: -55px;
+}
+
+#speaker {
+  width: 60px;
+  height: 12px;
+  background: #eee;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, .06) inset;
+}
+
+#camera {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #eee;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, .06) inset;
+  border-radius: 50%;
+  margin-right: 2px;
+}
+
+#bottom-pane {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -70px;
+  text-align: center;
+}
+
+#home-button {
+  width: 55px;
+  height: 55px;
+  background: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  text-indent: -999px;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, .07) inset, 0 5px 0 rgba(0, 0, 0, .01);
+  position: relative;
+  border: 0;
+
+  &:after {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: calc(50% - 9px - 2px);
+    left: calc(50% - 9px - 2px);
+    content: "";
+    border: 2px solid #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
+  }
+}
+
+#screen {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #34495e;
+  position: relative;
+}
