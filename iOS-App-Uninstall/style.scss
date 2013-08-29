@@ -7,6 +7,7 @@ div {
 
 body {
   background: #3498db;
+  font-family: Arial;
 }
 
 #iphone {
@@ -85,6 +86,28 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  background: #34495e;
+  background: #27ae60;
   position: relative;
+}
+
+#navigation-bar {
+  overflow: hidden;
+  padding: 3px;
+  background: rgba(0, 0, 0, .2);
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  font-weight: bold;
+
+  i {
+    font-size: 14px;
+  }
+
+  .connectivity {
+    float: left;
+  }
+
+  .utilities {
+    float: right;
+  }
 }
