@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Accordion List</title>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css' />
+    <link href='style.css' rel='stylesheet' type='text/css' />
+  </head>
+  <body>
+    <ul id='list'>
+      <li>
+        <div class='group-name'>Mammals</div>
+        <ul class='sub-level'>
+          <li class='group-animal'>badgers</li>
+          <li class='group-animal'>deer</li>
+          <li class='group-animal'>deer</li>
+          <li class='group-animal'>giraffes</li>
+        </ul>
+      </li>
+      <li>
+        <div class='group-name'>Birds</div>
+        <ul class='sub-level'>
+          <li class='group-animal'>geese</li>
+          <li class='group-animal'>hawks</li>
+          <li class='group-animal'>nightingales</li>
+          <li class='group-animal'>parrots</li>
+          <li class='group-animal'>quail</li>
+        </ul>
+      </li>
+      <li>
+        <div class='group-name'>Invertebrates</div>
+        <ul class='sub-level'>
+          <li class='group-animal'>bees</li>
+          <li class='group-animal'>hornets</li>
+          <li class='group-animal'>grasshoppers</li>
+          <li class='group-animal'>oysters</li>
+          <li class='group-animal'>jellyfish</li>
+        </ul>
+      </li>
+    </ul>
+    <script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+    <script>
+      $('#list .group-name').click(function() {
+        $(this).siblings('.sub-level').toggleClass('open')
+      });
+    </script>
+  </body>
+</html>
