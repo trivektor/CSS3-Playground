@@ -1,0 +1,100 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #000;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.ripple {
+  border: 3px solid red;
+  border-radius: 50%;
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: calc(50% - 300px);
+  right: calc(50% - 300px);
+  opacity: 0;
+
+  -webkit: {
+    transform: scale(0);
+
+    animation: {
+      name: ripple;
+
+      iteration: {
+        count: infinite
+      }
+
+      direction: forward;
+
+      duration: 7.5s;
+
+      timing: {
+        function: linear
+      }
+    }
+  }
+}
+
+@-webkit-keyframes ripple {
+  14.2% {
+    opacity: .25;
+    border-color: red
+   }
+
+  28.4% {
+    opacity: .5;
+    border-color: orange
+  }
+
+  42.6% {
+    opacity: 1;
+    border-color: yellow
+  }
+
+  56.8% {
+    opacity: 1;
+    border-color: green
+   }
+
+  71% {
+    opacity: .5;
+    border-color: blue
+  }
+
+  85.2% {
+    opacity: .25;
+    border-color: indigo
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+    border-color: violet
+  }
+}
+
+.ripple:nth-of-type(1) {
+  -webkit-animation-delay: 1.5s;
+}
+
+.ripple:nth-of-type(2) {
+  -webkit-animation-delay: 3s;
+}
+
+.ripple:nth-of-type(3) {
+  -webkit-animation-delay: 4.5s;
+}
+
+.ripple:nth-of-type(4) {
+  -webkit-animation-delay: 6s;
+}
+
+.ripple:nth-of-type(5) {
+  -webkit-animation-delay: 7.5s;
+}
