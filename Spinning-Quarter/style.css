@@ -1,0 +1,60 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
+
+body {
+  background: #fff;
+  font-family: Arial; }
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 3px solid red;
+  padding: 10px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -webkit-transition: all ease-in-out .2s; }
+  .circle .inner-ring {
+    border-style: solid;
+    border-width: 10px;
+    border-radius: inherit;
+    width: 300px;
+    height: 300px;
+    border-color: #54BDFF transparent transparent;
+    position: relative;
+    z-index: 10;
+    -webkit-animation-name: spin;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite; }
+  .circle .inner-ring-beneath {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-color: #D1F1FC;
+    z-index: 5; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0); }
+
+  20% {
+    -webkit-transform: rotate(72deg); }
+
+  40% {
+    -webkit-transform: rotate(144deg); }
+
+  60% {
+    -webkit-transform: rotate(216deg); }
+
+  80% {
+    -webkit-transform: rotate(288deg); }
+
+  100% {
+    -webkit-transform: rotate(360deg); } }
